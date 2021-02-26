@@ -18,4 +18,22 @@ $outputAboutYear = 'Enter year, please';
 $outputAboutMonth = 'Enter month, please';
 $countVowelResult = 'Enter line, please';
 
+// список із назвами місяців, для різних локалізацій (мов)
+// щоб в майбутньому була змога локалізувати наш веб-додаток
+$months = [
+    'en' => [
+        '1' => 'January', 'February',
+        'March', 'April', 'May',
+        'June', 'July', 'August',
+        'September', 'October', 'November',
+        'December'
+    ],
+    'ua' => [
+        '1' => 'Січень', 
+    ],
+];
+
+// а ось тут я захардкодив значення по замовчуванню
+$monthArray = $months['en'];
+
 // не забуваємо залишати один "пустий" рядок в кінці кожного php-файла

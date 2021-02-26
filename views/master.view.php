@@ -4,23 +4,21 @@
         <meta charset="UTF-8">
         <meta name="viewport"content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Document</title>
-        <style>
-            <!-- в цілому так не робиться, лишня операція читання, але сама задумка цікава -->
-            <?php echo file_get_contents("css/style.css"); ?>
-        </style>
+        <title>HomeWork #1 | Oleg Zadorozhnyi</title>
+        <link rel="stylesheet" href="/public/css/style.css">
     </head>
     <body>
+        <!-- task #1 -->
         <section class="task1">
             <div class="container">
                 <div class="form-value-year">
                     <h2>Task 1</h2>
-                    <form action="/" method="get" class="form-task1">
+                    <form action="index.php" method="POST" class="form-task1">
                         <div>
                             <input type="number" name="year">
                             <select name="month">
                                 <!-- приклад роботи з циклом для масивів -->
-                                <?php foreach(ARRAY_MONTH as $key => $value): ?>
+                                <?php foreach($monthArray as $key => $value): ?>
                                     <option value="<?= $key ?>"><?= $value ?></option>
                                 <?php endforeach; ?>
                             </select>
@@ -32,11 +30,13 @@
                 </div>
             </div>
         </section>
+
+        <!-- task #2 -->
         <section class="task2">
             <div class="container">
                 <div class="form-palindrome">
                     <h2>Task 2</h2>
-                    <form action="/" method="get" class="form-task2">
+                    <form action="index.php" method="POST" class="form-task2">
                         <input type="text" name="palindrome">
                         <input type="submit" value="submit" name="submit-palindrome" class="input-button">
                     </form>
@@ -46,11 +46,13 @@
                 </div>
             </div>
         </section>
+
+        <!-- task #3 -->
         <section class="task2">
             <div class="container">
                 <div class="form-vowels">
                     <h2>Task 3</h2>
-                    <form action="/" method="get" class="form-task3">
+                    <form action="index.php" method="POST" class="form-task3">
                         <input type="text" name="check-vowels">
                         <input type="submit" value="submit" name="submit-vowels" class="input-button">
                     </form>
@@ -60,5 +62,6 @@
                 </div>
             </div>
         </section>
+
     </body>
 </html>
